@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
-#crea_stanza {
+#botton-right {
     margin-top: 10px;
+}
+
+.room_list {
+    margin-left: 20px;
 }

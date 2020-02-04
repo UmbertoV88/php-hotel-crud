@@ -12,7 +12,7 @@ echo ("Connection failed: " . $conn->connect_error);
 } else {
     // echo "Connection ok " ;
 
-    $sql = "SELECT room_number, floor FROM stanze";
+    $sql = "SELECT id, room_number, floor FROM stanze";
     $result = $conn->query($sql);
 
 
@@ -45,7 +45,7 @@ echo ("Connection failed: " . $conn->connect_error);
 
                  </div>
                  <div class="col-sm-6 text-right">
-                     <a id="crea_stanza" class="btn btn-success" href="#"> Crea una nuova stanza </a>
+                     <a id="botton-right" class="btn btn-success" href="creazione.php"> Crea una nuova stanza </a>
                  </div>
              </div>
 
@@ -69,9 +69,9 @@ echo ("Connection failed: " . $conn->connect_error);
                                          <td> <?php echo $row['room_number'] ?> </td>
                                          <td> <?php echo $row['floor'] ?> </td>
                                          <td>
-                                             <a class="btn btn-info" href="#"> Visualizza </a>
-                                             <a class="btn btn-warning" href="#"> Modifica </a>
-                                             <a class="btn btn-danger" href="#"> Cancella </a>
+                                             <a class="btn btn-info" href="visualizza.php?stanza_id=<?php echo $row['id'] ?>"> Visualizza </a>
+                                             <a class="btn btn-warning" href="modifica.php"> Modifica </a>
+                                             <a class="btn btn-danger" href="cancellazione.php"> Cancella </a>
                                          </td>
                                      </tr>
                                      <?php

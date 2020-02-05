@@ -13,8 +13,24 @@ include 'layout/head.php';
         </div>
     </div>
 
+    <?php
+    if(!empty($_GET['success'])) {
+        if($_GET['success'] == 'true'){?>
+            <div class="alert alert-success" role="alert">
+              Stanza inserita con successo!
+            </div>
+            <?php
+        }else{?>
+            <div class="alert alert-danger" role="alert">
+              Si è verificato un errore! Stanza non inserita
+            </div>
+        <?php
+        }
+    } ?>
+
     <div class="row">
         <div class="col-sm-12">
+
             <form method="post" action="insert.php">
               <div class="form-group">
                 <label for="numero_stanza"> Numero Stanza </label>

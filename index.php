@@ -39,7 +39,7 @@ include 'layout/head.php';
                                          <td> <?php echo $row['floor'] ?> </td>
                                          <td>
                                              <a class="btn btn-info" href="visualizza.php?stanza_id=<?php echo $row['id'] ?>"> Visualizza </a>
-                                             <a class="btn btn-warning" href="modifica.php"> Modifica </a>
+                                             <a class="btn btn-warning" href="modifica.php?stanza_id=<?php echo $row['id'] ?>"> Modifica </a>
                                              <a class="btn btn-danger" href="cancellazione.php"> Cancella </a>
                                          </td>
                                      </tr>

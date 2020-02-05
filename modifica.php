@@ -7,7 +7,7 @@ include 'layout/head.php';
 
 
 ?>
-<div class="container">
+<div class="container main">
     <div class="row">
         <div class="col-sm-6">
             <h1> Modifica stanza  </h1>
@@ -73,3 +73,4 @@ include 'layout/head.php';
         </div>
     </div>
 </div>
+<?php include 'layout/footer.php'?>;

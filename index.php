@@ -7,7 +7,7 @@ $result = esegui_query($sql);
 include 'layout/head.php';
 
 ?>
-         <div class="container">
+         <div class="container main">
              <div class="row">
                  <div class="col-sm-6">
                      <h1> Tutte le stanze dell'hotel </h1>
@@ -17,6 +17,21 @@ include 'layout/head.php';
                      <a id="botton-right" class="btn btn-success" href="creazione.php"> Crea una nuova stanza </a>
                  </div>
              </div>
+
+             <?php
+             if(!empty($_GET['success'])) {
+                 if($_GET['success'] == 'true'){?>
+                     <div class="alert alert-success" role="alert">
+                       Stanza eliminata con successo!
+                     </div>
+                     <?php
+                 }else{?>
+                     <div class="alert alert-danger" role="alert">
+                       Si è verificato un errore! Stanza non inserita
+                     </div>
+                 <?php
+                 }
+             } ?>
 
              <div class="row">
                  <div class="col-sm-12">
@@ -40,7 +55,7 @@ include 'layout/head.php';
                                          <td>
                                              <a class="btn btn-info" href="visualizza.php?stanza_id=<?php echo $row['id'] ?>"> Visualizza </a>
                                              <a class="btn btn-warning" href="modifica.php?stanza_id=<?php echo $row['id'] ?>"> Modifica </a>
-                                             <a class="btn btn-danger" href="cancellazione.php"> Cancella </a>
+                                             <a class="btn btn-danger" href="cancellazione.php?stanza_id=<?php echo $row['id'] ?>"> Cancella </a>
                                          </td>
                                      </tr>
                                      <?php
@@ -67,5 +82,4 @@ include 'layout/head.php';
                  </div>
              </div>
          </div>
-     </body>
- </html>
+     <?php include 'layout/footer.php'?>;

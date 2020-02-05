@@ -15,3 +15,4 @@
      <title> PHP Hotel CRUD</title>
      </head>
      <body>
+         <?php include 'layout/navbar.php' ?>;

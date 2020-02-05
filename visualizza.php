@@ -9,7 +9,7 @@ $result = esegui_query($sql);
 
 include 'layout/head.php';
 ?>
-         <div class="container">
+         <div class="container main">
              <div class="row">
                  <div class="col-sm-12">
                      <h1> Dettaglio stanza </h1>
@@ -53,3 +53,4 @@ include 'layout/head.php';
          </div>
      </body>
  </html>
+ <?php include 'layout/footer.php'?>;
